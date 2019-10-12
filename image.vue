@@ -19,7 +19,7 @@
 				default() {
 					return ''
 				}
-			}
+			},
 		},
 		data() {
 			return {
@@ -33,7 +33,7 @@
 						height = naturalHeight * width / naturalWidth
 					this.height = {height: height + 'px'}
 				}
-			}
+			},
 		},
 		computed: {
 			url() {
@@ -41,21 +41,15 @@
 				if(/\\/.test(path)) path.replace(/\\/g, '/')
 				return path
 			},
-			modeClass() {
-				let mode = 'scale-to-fill'
-				switch(this.mode) {
-					case 'aspectFit':
-					mode = 'aspect-fit'
-					break
-					case 'aspectFill':
-					mode = 'aspect-fill'
-					break
-					case 'widthFix':
-					mode = 'width-fix'
-					break				
-				}
-				return mode
-			}
+			let mode = 'scale-to-fill'
+			switch(this.mode) {
+				case 'aspectFit':
+				return 'aspect-fit'
+				case 'aspectFill':
+				return 'aspect-fill'
+				case 'widthFix':
+				return 'width-fix'
+			},
 		}
 	}
 </script>
