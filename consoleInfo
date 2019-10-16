@@ -1,0 +1,4 @@
+let e = '%c'
+let msg = 'hello world'
+let style = 'color: red; font-size: 20px; text-shadow: 0 0 3px #aaa'
+console.info(e + msg, style)
