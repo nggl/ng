@@ -1,0 +1,10 @@
+// using setTimeout to do `requestAnimationFrame` and `cancelAnimationFrame`
+let lastFrameTime = 0,
+    doAnimationFrame = cb => {
+      let currTime = Date.now(),
+          timeToCall = Math.max(0, 16 - (currTime - lastFrameTime)),
+          id = setTimeout(e => (cb(currTime + timeToCall)), timeToCall)
+      lastFrameTime = currTime + timeToCall
+      return id
+    },
+    abortAnimationFrame = id => (clearTimeout(id))
