@@ -1,0 +1,16 @@
+.word-online {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.word-2-line,
+.word-3-line {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.word-3-line {
+	-webkit-line-clamp: 3;
+}
